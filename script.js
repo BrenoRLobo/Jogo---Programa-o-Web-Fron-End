@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const numeroMinimo = 1;
     const numeroMaximo = 100;
-    const numeroAleatorio = 16;
+    const numeroAleatorio = Math.floor(Math.random() * (numeroMaximo - numeroMinimo + 1)) + numeroMinimo;
+    let tentativas = 0;
   
     const campoPalpite = document.getElementById("guessInput");
     const botaoPalpite = document.getElementById("guessButton");
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         tentativas++;
         if (palpite === 16) {
-          setMessage(`Parabéns! Você adivinhou o número ${numeroAleatorio}!`, "green");
+          setMessage(`Parabéns! Você adivinhou o número 16!`, "green");
           campoPalpite.disabled = true;
           botaoPalpite.disabled = true;
         } else {
