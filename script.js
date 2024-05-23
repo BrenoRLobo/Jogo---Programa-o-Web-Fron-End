@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const numeroMinimo = 1;
     const numeroMaximo = 100;
-    const numeroAleatorio = Math.floor(Math.random() * (numeroMaximo - numeroMinimo + 1)) + numeroMinimo;
-    let tentativas = 0;
+    const numeroAleatorio = 16;
   
     const campoPalpite = document.getElementById("guessInput");
     const botaoPalpite = document.getElementById("guessButton");
@@ -15,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setMessage("Por favor, insira um número válido entre 1 e 100", "red");
       } else {
         tentativas++;
-        if (palpite === numeroAleatorio) {
-          setMessage(`Parabéns! Você adivinhou o número ${numeroAleatorio} em ${tentativas} tentativas!`, "green");
+        if (palpite === 16) {
+          setMessage(`Parabéns! Você adivinhou o número ${numeroAleatorio}!`, "green");
           campoPalpite.disabled = true;
           botaoPalpite.disabled = true;
         } else {
